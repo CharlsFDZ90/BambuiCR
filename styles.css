@@ -179,6 +179,7 @@ section { padding: 96px 0; }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  padding: 0;
 }
 
 .hero-bg {
@@ -749,7 +750,7 @@ section { padding: 96px 0; }
 }
 
 @media (max-width: 720px) {
-  section { padding: 72px 0; }
+  section { padding: 50px 0; }
 
   .main-nav {
     position: fixed;
