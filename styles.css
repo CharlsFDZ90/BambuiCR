@@ -702,16 +702,31 @@ section { padding: 96px 0; }
   .lightbox-arrow svg { width: 20px; height: 20px; }
   .lightbox-close { top: 16px; right: 16px; }
 
-  /* Imagen alternativa del hero para mobile: encuadre vertical
-     donde se ve a los 6 integrantes completos, sin cortarlos.
-     "contain" en vez de "cover" para que nunca se recorte,
-     sin importar el alto real del navegador del teléfono. */
-  .hero-bg {
-    background-image: url('images/bambui-02-mobile.jpg') !important;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  /* Hero en mobile: en vez de forzar 100vh (lo que dejaba franjas
+     negras vacías arriba/abajo de la foto), el hero se ajusta al alto
+     real de la imagen (su aspect-ratio) y el texto pasa a fluir debajo
+     de la foto. Así se ve la foto completa, sin recortar a la banda,
+     y sin espacios vacíos. */
+  .hero {
+    display: block;
+    min-height: 0;
   }
+
+  .hero-bg {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 1920 / 1282;
+    background-size: cover;
+    background-position: center;
+    transform: none;
+  }
+
+  .hero-content {
+    padding: 32px 24px 48px;
+  }
+
+  .scroll-cue { display: none; }
 }
 
 /* ---------- REVEAL ANIMATION ---------- */
