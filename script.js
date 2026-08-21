@@ -117,4 +117,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') showNext();
   });
 
+  // Formulario de contacto: contador de caracteres del mensaje
+  const contactMensaje = document.getElementById('contactMensaje');
+  const charCount = document.getElementById('charCount');
+
+  if (contactMensaje && charCount) {
+    contactMensaje.addEventListener('input', () => {
+      charCount.textContent = contactMensaje.value.length;
+    });
+  }
+
+  // Formulario de contacto: simulación visual (todavía sin envío real)
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+      formStatus.textContent = '¡Mensaje enviado! Te vamos a contactar pronto.';
+      contactForm.reset();
+      charCount.textContent = '0';
+    });
+  }
+
 });

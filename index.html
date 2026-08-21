@@ -287,10 +287,52 @@
     </div>
   </section>
 
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="section-inner contact-inner">
+      <p class="section-label section-label--yellow">Contacto</p>
+      <h2>Escribinos</h2>
+      <p class="contact-intro">Contrataciones, prensa, merchandising o cualquier otra consulta — contanos qué necesitás.</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="contactNombre">Nombre completo</label>
+            <input type="text" id="contactNombre" name="nombre" autocomplete="given-name" required>
+          </div>
+          <div class="form-field">
+            <label for="contactApellidos">Apellidos</label>
+            <input type="text" id="contactApellidos" name="apellidos" autocomplete="family-name" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="contactMotivo">¿Para qué deseas contactarnos?</label>
+          <select id="contactMotivo" name="motivo" required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Contrataciones">Contrataciones</option>
+            <option value="Prensa">Prensa</option>
+            <option value="Merchandising">Merchandising</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="contactMensaje">Enviar mensaje</label>
+          <textarea id="contactMensaje" name="mensaje" rows="5" maxlength="300" required></textarea>
+          <span class="char-count"><span id="charCount">0</span>/300 caracteres</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary contact-submit">Enviar</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
 </main>
 
-<!-- FOOTER / CONTACTO -->
-<footer class="site-footer" id="contacto">
+<!-- FOOTER -->
+<footer class="site-footer">
   <div class="section-inner footer-inner">
     <div class="footer-brand">
       <span class="logo-wordmark logo-wordmark--footer">BAMBUI</span>
