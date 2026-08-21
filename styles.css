@@ -152,6 +152,36 @@ section { padding: 64px 0; }
 
 .main-nav a:hover { color: var(--gold); }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-option {
+  font-family: var(--font-bold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cream-dim);
+  background: none;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-option:hover { color: var(--cream); }
+
+.lang-option.is-active {
+  background: var(--yellow);
+  color: var(--bg);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;

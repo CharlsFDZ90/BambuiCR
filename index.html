@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="htmlRoot">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bambui — Reggae & Rock desde Costa Rica</title>
-<meta name="description" content="Bambui es una banda costarricense que fusiona reggae y rock con más de una década de trayectoria. Escuchá su música, mirá fotos y seguí sus próximas fechas.">
+<title id="pageTitle">Bambui — Reggae & Rock desde Costa Rica</title>
+<meta name="description" content="Bambui es una banda costarricense que fusiona reggae y rock con más de una década de trayectoria. Escuchá su música, mirá fotos y seguí sus próximas fechas." id="metaDescription">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Bambui — Reggae & Rock desde Costa Rica">
@@ -28,13 +28,17 @@
       <img src="images/logo/bambui-logo-white.png" alt="Bambui" class="logo-wordmark-img">
     </a>
     <nav class="main-nav" id="mainNav">
-      <a href="#bio">Bio</a>
-      <a href="#musica">Música</a>
-      <a href="#galeria">Galería</a>
-      <a href="#shows">Shows</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#bio" data-i18n="navBio">Bio</a>
+      <a href="#musica" data-i18n="navMusica">Música</a>
+      <a href="#galeria" data-i18n="navGaleria">Galería</a>
+      <a href="#shows" data-i18n="navShows">Shows</a>
+      <a href="#contacto" data-i18n="navContacto">Contacto</a>
+      <div class="lang-toggle" id="langToggle" role="group" aria-label="Seleccionar idioma / Select language">
+        <button type="button" class="lang-option is-active" data-lang="es">ES</button>
+        <button type="button" class="lang-option" data-lang="en">EN</button>
+      </div>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-i18n-attr="aria-label:navToggleLabel" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -51,13 +55,13 @@
       <h1 class="hero-title">
         <img src="images/logo/bambui-logo-white.png" alt="Bambui" class="hero-title-img">
       </h1>
-      <p class="hero-tagline">Más de una década fusionando reggae, rock y las calles de San José.</p>
+      <p class="hero-tagline" data-i18n="heroTagline">Más de una década fusionando reggae, rock y las calles de San José.</p>
       <div class="hero-actions">
-        <a href="#musica" class="btn btn-primary">Escuchar música</a>
-        <a href="#shows" class="btn btn-outline">Próximos shows</a>
+        <a href="#musica" class="btn btn-primary" data-i18n="heroBtnMusica">Escuchar música</a>
+        <a href="#shows" class="btn btn-outline" data-i18n="heroBtnShows">Próximos shows</a>
       </div>
     </div>
-    <a href="#bio" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <a href="#bio" class="scroll-cue" aria-label="Bajar a la siguiente sección" data-i18n-attr="aria-label:scrollCueLabel">
       <span></span>
     </a>
   </section>
@@ -66,20 +70,20 @@
   <section class="bio" id="bio">
     <div class="section-inner bio-grid">
       <div class="bio-text reveal">
-        <p class="section-label section-label--yellow">La banda</p>
-        <h2>Reggae Fusión desde San José, Costa Rica</h2>
-        <p>
+        <p class="section-label section-label--yellow" data-i18n="bioLabel">La banda</p>
+        <h2 data-i18n="bioTitle">Reggae Fusión desde San José, Costa Rica</h2>
+        <p data-i18n="bioP1">
           Bambui es un grupo musical de Reggae Fusión fundado a comienzos del año 2009 en San José,
           Costa Rica. Presenta una mezcla de Reggae y Rock, fusionando otros ritmos como el Funk,
           Rap, Ska y Latino.
         </p>
-        <p>
+        <p data-i18n="bioP2">
           Sus presentaciones en vivo ofrecen una alta descarga de energía, donde sus oyentes podrán
           cantar, bailar y saltar al ritmo enérgico y moderno, característico de la banda.
         </p>
       </div>
       <div class="bio-photo reveal">
-        <img src="images/bambui-03.jpg" alt="Bambui, banda de reggae y rock de Costa Rica, retrato grupal" loading="lazy">
+        <img src="images/bambui-03.jpg" alt="Bambui, banda de reggae y rock de Costa Rica, retrato grupal" loading="lazy" data-i18n-attr="alt:bioPhotoAlt">
       </div>
     </div>
   </section>
@@ -87,14 +91,15 @@
   <!-- MUSICA / REDES -->
   <section class="musica" id="musica">
     <div class="section-inner">
-      <p class="section-label section-label--light section-label--yellow">Escúchanos</p>
-      <h2 class="section-title--light">Encontrá a Bambui en tus plataformas</h2>
+      <p class="section-label section-label--light section-label--yellow" data-i18n="musicaLabel">Escúchanos</p>
+      <h2 class="section-title--light" data-i18n="musicaTitle">Encontrá a Bambui en tus plataformas</h2>
 
       <!-- Reproductor de Spotify -->
       <div class="spotify-embed reveal">
         <iframe
           src="https://open.spotify.com/embed/artist/3OP8Tv5mH4c1lo3yaSRo7K?utm_source=generator&theme=0"
           title="Bambui en Spotify"
+          data-i18n-attr="title:musicaSpotifyTitle"
           width="100%" height="420" frameborder="0"
           loading="lazy"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -108,7 +113,7 @@
           </span>
           <span class="link-label">
             <strong>Spotify</strong>
-            <small>Discografía completa</small>
+            <small data-i18n="linkSpotifySmall">Discografía completa</small>
           </span>
         </a>
         <a class="link-card" href="https://www.youtube.com/@BambuiCR" target="_blank" rel="noopener">
@@ -117,7 +122,7 @@
           </span>
           <span class="link-label">
             <strong>YouTube</strong>
-            <small>Videos y sesiones</small>
+            <small data-i18n="linkYoutubeSmall">Videos y sesiones</small>
           </span>
         </a>
         <a class="link-card" href="https://www.instagram.com/bambuicr/" target="_blank" rel="noopener">
@@ -145,96 +150,96 @@
   <!-- GALERIA -->
   <section class="galeria" id="galeria">
     <div class="section-inner">
-      <p class="section-label">Galería</p>
-      <h2>En el escenario y detrás de cámara</h2>
+      <p class="section-label" data-i18n="galeriaLabel">Galería</p>
+      <h2 data-i18n="galeriaTitle">En el escenario y detrás de cámara</h2>
       <div class="gallery-grid">
 
         <button class="gallery-item" data-full="images/gallery/Bambui_05.jpg">
-          <img src="images/gallery/thumbs/Bambui_05.jpg" alt="Bambui, retrato grupal de la banda" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_05.jpg" alt="Bambui, retrato grupal de la banda" data-i18n-attr="alt:gal05" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_25.jpg">
-          <img src="images/gallery/thumbs/Bambui_25.jpg" alt="Retrato de integrante de Bambui" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_25.jpg" alt="Retrato de integrante de Bambui" data-i18n-attr="alt:gal25" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_43.jpg">
-          <img src="images/gallery/thumbs/Bambui_43.jpg" alt="Guitarrista de Bambui con luces azules" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_43.jpg" alt="Guitarrista de Bambui con luces azules" data-i18n-attr="alt:gal43" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_14.jpg">
-          <img src="images/gallery/thumbs/Bambui_14.jpg" alt="Bambui posando contra pared de ladrillo" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_14.jpg" alt="Bambui posando contra pared de ladrillo" data-i18n-attr="alt:gal14" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_36.jpg">
-          <img src="images/gallery/thumbs/Bambui_36.jpg" alt="Integrante de Bambui riendo hacia la cámara" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_36.jpg" alt="Integrante de Bambui riendo hacia la cámara" data-i18n-attr="alt:gal36" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_38.jpg">
-          <img src="images/gallery/thumbs/Bambui_38.jpg" alt="Bajista de Bambui con luces azules y magenta" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_38.jpg" alt="Bajista de Bambui con luces azules y magenta" data-i18n-attr="alt:gal38" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_17.jpg">
-          <img src="images/gallery/thumbs/Bambui_17.jpg" alt="Bambui con patineta en bodega industrial" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_17.jpg" alt="Bambui con patineta en bodega industrial" data-i18n-attr="alt:gal17" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_20.jpg">
-          <img src="images/gallery/thumbs/Bambui_20.jpg" alt="Retrato de integrante de Bambui con lentes de sol" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_20.jpg" alt="Retrato de integrante de Bambui con lentes de sol" data-i18n-attr="alt:gal20" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_41.jpg">
-          <img src="images/gallery/thumbs/Bambui_41.jpg" alt="Tecladista de Bambui con luces azules" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_41.jpg" alt="Tecladista de Bambui con luces azules" data-i18n-attr="alt:gal41" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_44.jpg">
-          <img src="images/gallery/thumbs/Bambui_44.jpg" alt="Integrante de Bambui bajo luces verdes y azules" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_44.jpg" alt="Integrante de Bambui bajo luces verdes y azules" data-i18n-attr="alt:gal44" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_18.jpg">
-          <img src="images/gallery/thumbs/Bambui_18.jpg" alt="Bambui en contrapicado, retrato grupal" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_18.jpg" alt="Bambui en contrapicado, retrato grupal" data-i18n-attr="alt:gal18" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_31.jpg">
-          <img src="images/gallery/thumbs/Bambui_31.jpg" alt="Retrato cercano de integrante de Bambui" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_31.jpg" alt="Retrato cercano de integrante de Bambui" data-i18n-attr="alt:gal31" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_16.jpg">
-          <img src="images/gallery/thumbs/Bambui_16.jpg" alt="Bambui en blanco y negro con patineta" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_16.jpg" alt="Bambui en blanco y negro con patineta" data-i18n-attr="alt:gal16" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_46.jpg">
-          <img src="images/gallery/thumbs/Bambui_46.jpg" alt="Integrante de Bambui sentado sobre patineta" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_46.jpg" alt="Integrante de Bambui sentado sobre patineta" data-i18n-attr="alt:gal46" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_26.jpg">
-          <img src="images/gallery/thumbs/Bambui_26.jpg" alt="Retrato de integrante de Bambui" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_26.jpg" alt="Retrato de integrante de Bambui" data-i18n-attr="alt:gal26" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_19.jpg">
-          <img src="images/gallery/thumbs/Bambui_19.jpg" alt="Bambui, retrato grupal en blanco y negro" loading="lazy" width="1800" height="1202">
+          <img src="images/gallery/thumbs/Bambui_19.jpg" alt="Bambui, retrato grupal en blanco y negro" data-i18n-attr="alt:gal19" loading="lazy" width="1800" height="1202">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_g17.jpg">
-          <img src="images/gallery/thumbs/Bambui_g17.jpg" alt="Guitarrista de Bambui con guitarra rosa, luces azules en vivo" loading="lazy" width="1800" height="1483">
+          <img src="images/gallery/thumbs/Bambui_g17.jpg" alt="Guitarrista de Bambui con guitarra rosa, luces azules en vivo" data-i18n-attr="alt:galG17" loading="lazy" width="1800" height="1483">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_g21.jpg">
-          <img src="images/gallery/thumbs/Bambui_g21.jpg" alt="Retrato de integrante de Bambui contra pared texturizada" loading="lazy" width="1202" height="1800">
+          <img src="images/gallery/thumbs/Bambui_g21.jpg" alt="Retrato de integrante de Bambui contra pared texturizada" data-i18n-attr="alt:galG21" loading="lazy" width="1202" height="1800">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_g18.jpg">
-          <img src="images/gallery/thumbs/Bambui_g18.jpg" alt="Vocalista de Bambui cantando con luces rojas" loading="lazy" width="1800" height="1013">
+          <img src="images/gallery/thumbs/Bambui_g18.jpg" alt="Vocalista de Bambui cantando con luces rojas" data-i18n-attr="alt:galG18" loading="lazy" width="1800" height="1013">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_g22.jpg">
-          <img src="images/gallery/thumbs/Bambui_g22.jpg" alt="Tecladista de Bambui en vivo con luces cálidas" loading="lazy" width="1800" height="1540">
+          <img src="images/gallery/thumbs/Bambui_g22.jpg" alt="Tecladista de Bambui en vivo con luces cálidas" data-i18n-attr="alt:galG22" loading="lazy" width="1800" height="1540">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_g19.jpg">
-          <img src="images/gallery/thumbs/Bambui_g19.jpg" alt="Baterista de Bambui en vivo con luz dorada" loading="lazy" width="1800" height="1195">
+          <img src="images/gallery/thumbs/Bambui_g19.jpg" alt="Baterista de Bambui en vivo con luz dorada" data-i18n-attr="alt:galG19" loading="lazy" width="1800" height="1195">
         </button>
 
         <button class="gallery-item" data-full="images/gallery/Bambui_g20.jpg">
-          <img src="images/gallery/thumbs/Bambui_g20.jpg" alt="Vocalista de Bambui cantando con luces verdes" loading="lazy" width="1800" height="1013">
+          <img src="images/gallery/thumbs/Bambui_g20.jpg" alt="Vocalista de Bambui cantando con luces verdes" data-i18n-attr="alt:galG20" loading="lazy" width="1800" height="1013">
         </button>
 
       </div>
@@ -246,39 +251,39 @@
     <div class="shows-bg" style="background-image:url('images/gallery/Bambui_live_01.jpg');"></div>
     <div class="shows-overlay"></div>
     <div class="section-inner shows-inner">
-      <p class="section-label">Agenda</p>
-      <h2>Próximos shows</h2>
+      <p class="section-label" data-i18n="showsLabel">Agenda</p>
+      <h2 data-i18n="showsTitle">Próximos shows</h2>
       <div class="shows-list">
 
         <div class="show-row reveal">
           <a class="show-ticket" href="https://latiqueteracr.com" target="_blank" rel="noopener">
-            Comprar entradas
+            <span data-i18n="showsBuyTickets">Comprar entradas</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
           <div class="show-info">
-            <span class="show-date">22 de octubre</span>
+            <span class="show-date" data-i18n="showDate1">22 de octubre</span>
             <span class="show-venue">Bar La Selva</span>
           </div>
         </div>
 
         <div class="show-row reveal">
           <a class="show-ticket" href="https://latiqueteracr.com" target="_blank" rel="noopener">
-            Comprar entradas
+            <span data-i18n="showsBuyTickets">Comprar entradas</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
           <div class="show-info">
-            <span class="show-date">13 de noviembre</span>
+            <span class="show-date" data-i18n="showDate2">13 de noviembre</span>
             <span class="show-venue">Bar El Observatorio</span>
           </div>
         </div>
 
         <div class="show-row reveal">
           <a class="show-ticket" href="https://latiqueteracr.com" target="_blank" rel="noopener">
-            Comprar entradas
+            <span data-i18n="showsBuyTickets">Comprar entradas</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
           <div class="show-info">
-            <span class="show-date">10 de diciembre</span>
+            <span class="show-date" data-i18n="showDate3">10 de diciembre</span>
             <span class="show-venue">Bar El Patio la U</span>
           </div>
         </div>
@@ -291,40 +296,40 @@
   <section class="contact" id="contacto">
     <div class="contact-bg" style="background-image:url('images/gallery/Bambui_16.jpg');"></div>
     <div class="section-inner contact-inner">
-      <p class="section-label section-label--yellow">Contacto</p>
-      <h2>Escribinos</h2>
-      <p class="contact-intro">Contrataciones, prensa, merchandising o cualquier otra consulta, contanos qué necesitás.</p>
+      <p class="section-label section-label--yellow" data-i18n="contactLabel">Contacto</p>
+      <h2 data-i18n="contactTitle">Escribinos</h2>
+      <p class="contact-intro" data-i18n="contactIntro">Contrataciones, prensa, merchandising o cualquier otra consulta, contanos qué necesitás.</p>
 
       <form class="contact-form" id="contactForm" novalidate>
         <div class="form-row">
           <div class="form-field">
-            <label for="contactNombre">Nombre completo</label>
+            <label for="contactNombre" data-i18n="contactNombreLabel">Nombre completo</label>
             <input type="text" id="contactNombre" name="nombre" autocomplete="given-name" required>
           </div>
           <div class="form-field">
-            <label for="contactApellidos">Apellidos</label>
+            <label for="contactApellidos" data-i18n="contactApellidosLabel">Apellidos</label>
             <input type="text" id="contactApellidos" name="apellidos" autocomplete="family-name" required>
           </div>
         </div>
 
         <div class="form-field">
-          <label for="contactMotivo">¿Para qué deseas contactarnos?</label>
+          <label for="contactMotivo" data-i18n="contactMotivoLabel">¿Para qué deseas contactarnos?</label>
           <select id="contactMotivo" name="motivo" required>
-            <option value="" disabled selected>Seleccioná una opción</option>
-            <option value="Contrataciones">Contrataciones</option>
-            <option value="Prensa">Prensa</option>
-            <option value="Merchandising">Merchandising</option>
-            <option value="Otro">Otro</option>
+            <option value="" disabled selected data-i18n="contactMotivoPlaceholder">Seleccioná una opción</option>
+            <option value="Contrataciones" data-i18n="contactMotivoContrataciones">Contrataciones</option>
+            <option value="Prensa" data-i18n="contactMotivoPrensa">Prensa</option>
+            <option value="Merchandising" data-i18n="contactMotivoMerchandising">Merchandising</option>
+            <option value="Otro" data-i18n="contactMotivoOtro">Otro</option>
           </select>
         </div>
 
         <div class="form-field">
-          <label for="contactMensaje">Enviar mensaje</label>
+          <label for="contactMensaje" data-i18n="contactMensajeLabel">Enviar mensaje</label>
           <textarea id="contactMensaje" name="mensaje" rows="5" maxlength="500" required></textarea>
-          <span class="char-count"><span id="charCount">0</span>/500 caracteres</span>
+          <span class="char-count"><span id="charCount">0</span><span data-i18n="contactCharSuffix">/500 caracteres</span></span>
         </div>
 
-        <button type="submit" class="btn btn-primary contact-submit">Enviar</button>
+        <button type="submit" class="btn btn-primary contact-submit" data-i18n="contactSubmit">Enviar</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -337,7 +342,7 @@
   <div class="section-inner footer-inner">
     <div class="footer-brand">
       <span class="logo-wordmark logo-wordmark--footer">BAMBUI</span>
-      <p>Reggae &amp; Rock desde Costa Rica</p>
+      <p data-i18n="footerTagline">Reggae &amp; Rock desde Costa Rica</p>
     </div>
     <div class="footer-links">
       <a href="https://www.youtube.com/@BambuiCR" target="_blank" rel="noopener">YouTube</a>
@@ -346,21 +351,21 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> Bambui. Todos los derechos reservados.</p>
+    <p>&copy; <span id="year"></span> Bambui. <span data-i18n="footerRights">Todos los derechos reservados.</span></p>
   </div>
 </footer>
 
 <!-- LIGHTBOX / CARRUSEL -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar y volver a la galería">&times;</button>
-  <button class="lightbox-arrow lightbox-arrow--prev" id="lightboxPrev" aria-label="Foto anterior">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar y volver a la galería" data-i18n-attr="aria-label:lightboxCloseLabel">&times;</button>
+  <button class="lightbox-arrow lightbox-arrow--prev" id="lightboxPrev" aria-label="Foto anterior" data-i18n-attr="aria-label:lightboxPrevLabel">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
   </button>
   <figure class="lightbox-figure">
     <img src="" alt="" id="lightboxImg">
     <figcaption class="lightbox-counter" id="lightboxCounter"></figcaption>
   </figure>
-  <button class="lightbox-arrow lightbox-arrow--next" id="lightboxNext" aria-label="Foto siguiente">
+  <button class="lightbox-arrow lightbox-arrow--next" id="lightboxNext" aria-label="Foto siguiente" data-i18n-attr="aria-label:lightboxNextLabel">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
   </button>
 </div>
