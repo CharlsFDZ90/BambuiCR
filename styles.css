@@ -296,13 +296,15 @@ section { padding: 96px 0; }
 }
 
 .btn-outline {
-  border-color: var(--cream-dim);
-  color: var(--cream);
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--bg);
 }
 
 .btn-outline:hover {
+  background: var(--gold);
   border-color: var(--gold);
-  color: var(--gold);
+  color: var(--bg);
   transform: translateY(-2px);
 }
 
