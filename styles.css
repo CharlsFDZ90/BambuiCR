@@ -81,7 +81,7 @@ strong, b {
 
 h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); color: var(--cream); }
 
-section { padding: 96px 0; }
+section { padding: 64px 0; }
 
 /* Grain overlay */
 .grain {
@@ -859,7 +859,7 @@ section { padding: 96px 0; }
 }
 
 @media (max-width: 720px) {
-  section { padding: 50px 0; }
+  section { padding: 35px 0; }
 
   .main-nav {
     position: fixed;
