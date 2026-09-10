@@ -10,6 +10,7 @@ const translations = {
     navBio: 'Bio',
     navMusica: 'Música',
     navGaleria: 'Galería',
+    navTienda: 'Tienda',
     navShows: 'Shows',
     navContacto: 'Contacto',
     navToggleLabel: 'Abrir menú',
@@ -51,6 +52,20 @@ const translations = {
     galG22: 'Tecladista de Bambui en vivo con luces cálidas',
     galG19: 'Baterista de Bambui en vivo con luz dorada',
     galG20: 'Vocalista de Bambui cantando con luces verdes',
+    shopLabel: 'Tienda',
+    shopTitle: 'Llevate a Bambui contigo',
+    shopIntro: 'Merch oficial de la banda. Coordinamos entrega y envío por WhatsApp o Instagram.',
+    shopPhotoPending: 'Foto próximamente',
+    shopSizesLabel: 'Tallas',
+    shopSizesLabelUnica: 'Talla',
+    shopSizeUnica: 'Única',
+    shopBuyBtn: 'Comprar',
+    shopItem1Name: 'Camisa Bambui',
+    shopItem1Desc: 'Camisa 100% algodón con el logo de Bambui estampado al frente.',
+    shopItem2Name: 'Gorra Bambui',
+    shopItem2Desc: 'Gorra ajustable bordada con el logo de la banda.',
+    shopItem3Name: 'Suéter Bambui',
+    shopItem3Desc: 'Suéter con capucha, algodón grueso, logo bordado al frente.',
     showsLabel: 'Agenda',
     showsTitle: 'Próximos shows',
     showsBuyTickets: 'Comprar entradas',
@@ -84,6 +99,7 @@ const translations = {
     navBio: 'Bio',
     navMusica: 'Music',
     navGaleria: 'Gallery',
+    navTienda: 'Shop',
     navShows: 'Shows',
     navContacto: 'Contact',
     navToggleLabel: 'Open menu',
@@ -125,6 +141,20 @@ const translations = {
     galG22: 'Bambui keyboardist live under warm lights',
     galG19: 'Bambui drummer live under golden light',
     galG20: 'Bambui singer performing under green lights',
+    shopLabel: 'Shop',
+    shopTitle: 'Take Bambui with you',
+    shopIntro: "Official band merch. We coordinate pickup and shipping over WhatsApp or Instagram.",
+    shopPhotoPending: 'Photo coming soon',
+    shopSizesLabel: 'Sizes',
+    shopSizesLabelUnica: 'Size',
+    shopSizeUnica: 'One size',
+    shopBuyBtn: 'Buy',
+    shopItem1Name: 'Bambui T-Shirt',
+    shopItem1Desc: '100% cotton t-shirt with the Bambui logo printed on the front.',
+    shopItem2Name: 'Bambui Cap',
+    shopItem2Desc: 'Adjustable cap embroidered with the band logo.',
+    shopItem3Name: 'Bambui Hoodie',
+    shopItem3Desc: 'Heavyweight cotton hoodie with the logo embroidered on the front.',
     showsLabel: 'Schedule',
     showsTitle: 'Upcoming shows',
     showsBuyTickets: 'Buy tickets',
@@ -307,6 +337,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') showPrev();
     if (e.key === 'ArrowRight') showNext();
+  });
+
+  // Tienda: "Comprar" precompleta el formulario de contacto
+  document.querySelectorAll('.shop-buy').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const product = btn.getAttribute('data-product');
+      const motivo = document.getElementById('contactMotivo');
+      const mensaje = document.getElementById('contactMensaje');
+      if (motivo) motivo.value = 'Merchandising';
+      if (mensaje && product) {
+        mensaje.value = `Hola, quisiera comprar: ${product}.`;
+        mensaje.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    });
   });
 
   // Formulario de contacto: contador de caracteres del mensaje

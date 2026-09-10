@@ -480,6 +480,134 @@ section { padding: 64px 0; }
   outline-offset: 3px;
 }
 
+/* ---------- TIENDA ---------- */
+.shop { background: var(--bg-alt); }
+
+.shop-intro {
+  max-width: 560px;
+  color: var(--cream-dim);
+  font-size: 1.02rem;
+  margin: 0 0 8px;
+}
+
+.shop-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(244, 238, 226, 0.06);
+  border: 1px solid rgba(244, 238, 226, 0.16);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.shop-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.shop-photo {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--bg);
+}
+
+.shop-photo--pending {
+  color: var(--cream-dim);
+}
+
+.shop-photo--pending svg {
+  width: 56px;
+  height: 56px;
+  opacity: 0.6;
+}
+
+.shop-photo--pending span {
+  font-family: var(--font-bold);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.shop-info {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shop-info h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  font-size: 1.15rem;
+  color: var(--cream);
+}
+
+.shop-desc {
+  margin: 0;
+  color: var(--cream-dim);
+  font-size: 0.9rem;
+}
+
+.shop-sizes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shop-sizes-label {
+  font-family: var(--font-bold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.size-badge {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--gold);
+  border: 1px solid rgba(217, 168, 72, 0.5);
+  border-radius: 4px;
+  padding: 2px 8px;
+  line-height: 1.5;
+}
+
+.shop-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.price-usd {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  color: var(--cream);
+  font-size: 1.05rem;
+}
+
+.price-crc {
+  color: var(--cream-dim);
+  font-size: 0.85rem;
+}
+
+.shop-buy { margin-top: 4px; align-self: flex-start; }
+
 /* ---------- SHOWS ---------- */
 .shows {
   position: relative;
