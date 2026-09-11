@@ -528,24 +528,6 @@ section { padding: 64px 0; }
   object-fit: cover;
 }
 
-.shop-photo--pending {
-  color: var(--cream-dim);
-}
-
-.shop-photo--pending svg {
-  width: 56px;
-  height: 56px;
-  opacity: 0.6;
-}
-
-.shop-photo--pending span {
-  font-family: var(--font-bold);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  opacity: 0.6;
-}
-
 .shop-info {
   padding: 22px;
   display: flex;
