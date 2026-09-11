@@ -522,6 +522,12 @@ section { padding: 64px 0; }
   background: var(--bg);
 }
 
+.shop-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .shop-photo--pending {
   color: var(--cream-dim);
 }
