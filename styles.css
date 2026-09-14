@@ -1017,6 +1017,13 @@ section { padding: 64px 0; }
     padding: 32px 24px 0;
   }
 
+  /* La foto ya no queda detrás del texto en mobile (el texto fluye
+     debajo), así que no necesita el degradado oscuro para contraste:
+     se deja clara. */
+  .hero-overlay {
+    background: none;
+  }
+
   .scroll-cue { display: none; }
 }
 
