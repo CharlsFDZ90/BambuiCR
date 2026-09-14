@@ -215,6 +215,7 @@ section { padding: 64px 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
+  background-image: var(--hero-img);
   background-size: cover;
   background-position: center 30%;
   transform: scale(1.05);
@@ -1005,7 +1006,8 @@ section { padding: 64px 0; }
     position: relative;
     inset: auto;
     width: 100%;
-    aspect-ratio: 1920 / 1282;
+    aspect-ratio: 1026 / 1200;
+    background-image: url('images/bambui-02-mobile.jpg');
     background-size: cover;
     background-position: center;
     transform: none;
